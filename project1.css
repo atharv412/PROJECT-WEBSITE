@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header-container{
+    font-family: 'Poppins', sans-serif;
+    background-color:rgb(255, 191, 52);
+    display: flex;
+}
+.navbar-items{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+
+}
+.main-logo{
+    width: auto;
+    height: 80px;;
+}
+.head-nav{
+    list-style-type: none;
+    display: flex;
+}
+.head-nav li a{
+    display: block;
+    color: black;
+    padding: 14px;
+    text-decoration: none;
+}
