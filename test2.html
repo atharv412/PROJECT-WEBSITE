@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+    padding: 0;
+    margin: 0;
+}
+.nav-container{
+    
+    font-family:'Poppins', sans-serif;;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    background-color:rgb(255, 191, 52);
+    align-items: center;
+
+}
+.nav-container li{
+    list-style-type:none;
+    display: inline;
+}
+.nav-container  a{
+    display: inline-block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+.main-logo{
+height: 80px; 
+width: auto;
+display: flex;
+justify-content: center;
+background-color: currentColor;
+}
+#test-flex{
+    position: -webkit-sticky; /* for browser compatibility */
+  position: sticky;
+  top: 0.5px;
+  /* background-color: #00ff00; */
+  /* padding: 3px; */
+}
+
+.slider
+{
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    overflow-x: hidden;
+}
+.slider-nav a
+{
+    width: 0.5rem;
+    height:0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+.slider a:hover
+{
+    opacity: 1;
+}
+#slide2
+{
+    height: 400px;
+    width:100%;
+}
+#slide1
+{
+    height: 400px;
+    width:100%;
+}
+#slide3
+{
+    height: 400px;
+    width: 100%;
+}
+</style>
+<body>
+    <header>
+        
+    </header><div class="nav-container">
+            <nav></nav>
+            <img src="logo4-removebg-preview.png" class="main-logo">
+            <ul >
+                <li><a href="#About us">About us</a></li>
+                <li><a href="#Varieties">Varieties</a></li>
+                <li><a href="#Order">Order</a></li>
+                <li><a href="#Feedback">Feedback</a></li>
+            </ul>
+        </div>
+        <!-- <div class="slider-container"> -->
+        <div class="slider-wrapper">
+            <div class="slider">
+            <img id="slide1" src="D:\WEBSITE PROJECT\CODE\PROJECT-WEBSITE\main-image.jpg" alt="">
+            <img id="slide2" src="D:\WEBSITE PROJECT\CODE\PROJECT-WEBSITE\mango-background1.jpg" alt="">
+            <img id="slide3"  src="D:\WEBSITE PROJECT\CODE\PROJECT-WEBSITE\hotchicksing-Dyc95dKuGp4-unsplash.jpg" alt="">
+            </div>
+        <div class="slider-nav">
+            <a href="#slide1"></a>
+            <a href="#slide2"></a>
+            <a href="#slide3"></a>
+        </div>
+       </div>
+        <!-- </div> -->
+</body>
+</html>

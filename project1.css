@@ -9,7 +9,7 @@
 }
 .navbar-items{
     display: flex;
-    justify-content:space-between;
+    justify-content:center;
     align-items: center;
 
 }
@@ -21,8 +21,8 @@
     list-style-type: none;
     display: flex;
 }
-.head-nav li a{
-    display: block;
+.head-nav  a{
+    display: inline-block;
     color: black;
     padding: 14px;
     text-decoration: none;

@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    overflow-x: none;
+}
+nav{
+    width: 100%;
+    overflow-x: hidden;
+}
+.nav-container{
+    width: 100vw;
+    min-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0.1px;
+    background-color: rgb(255, 255, 255);
+    /* border-bottom-color: #ffb109; */
+    border-bottom: 1px solid rgb(255, 161, 9) ;
+    border-width: 3px;
+}
+#nav-logo{
+    width: 150px;
+}
+#nav-list{
+    width: 100%;
+    font-size: 1.1rem;
+    display: flex;
+    list-style: none;
+    padding-left: 14px;
+    padding-right: 14px;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+#nav-list a{
+    font-family:'Poppins', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color:rgb(0, 0, 0) ;
+}
+#nav-items{
+    display: flex;
+    gap: 30px;
+}
+#nav-list a:hover{
+    color: #ffb109;
+    text-decoration: underline;
+}
+
+
+#side-bar{
+    display: none;
+    list-style: none;
+    justify-content: flex-start;
+   background-color: rgba(236, 211, 16, 0.89);
+   /* backdrop-filter: blur(10px); */
+   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    z-index: 999;
+    height: 100vh;
+    align-items: flex-start; 
+    width: 200px;
+    position: fixed;
+    gap: 30px;
+}
+#side-bar a{
+    font-family:'Poppins', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color:rgb(0, 0, 0) ;
+}
+#side-bar li{
+    padding-left: 12px;
+    padding-top: 10px;
+    gap: 30px;
+}
+
+footer {
+    font-family:'Poppins', sans-serif ;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+#side-bar-logo {
+    display: none;
+}
+.main-image img{
+    /* justify-content: flex-end; */
+    background-position: fixed;
+    height: 500px;
+    width: 100%;
+    background-repeat: no-repeat;
+
+}
+.hero-image img
+{
+    width: 100vw;
+    height: 550px;
+}
+
+@media(max-width:697px){   
+        #nav-items{
+            display: none;
+            }  
+        #nav-list{
+            position:relative;
+        }
+        #nav-logo{
+            justify-content: center;
+            /* margin-left: 27vw;
+            margin-right: 27vw; */
+        }
+        #side-bar-logo{
+
+            display: block;
+        }
+    }

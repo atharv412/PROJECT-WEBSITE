@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mango Shop</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #4CAF50; /* Dark green */
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+    }
+
+    nav {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    .hamburger-menu {
+      display: none;
+      cursor: pointer;
+      font-size: 20px;
+      color: #fff;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
+      nav a {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .hamburger-menu {
+        display: block;
+      }
+
+      nav {
+        display: none;
+      }
+
+      nav.show {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Mango Shop</h1>
+    <p>Fresh and Delicious Mangoes</p>
+  </header>
+
+  <div class="hamburger-menu" onclick="toggleMenu()">☰</div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#featured">Featured Mangoes</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Welcome to Mango Shop!</h2>
+      <p>Explore our collection of the finest and freshest mangoes.</p>
+    </section>
+
+    <section id="featured">
+      <h2>Featured Mangoes</h2>
+      <div>
+        <img src="mango1.jpg" alt="Mango 1">
+        <p>Delicious Mango Variety 1</p>
+      </div>
+      <div>
+        <img src="mango2.jpg" alt="Mango 2">
+        <p>Sweet Mango Variety 2</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Mango Shop. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      var nav = document.querySelector('nav');
+      nav.classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>
