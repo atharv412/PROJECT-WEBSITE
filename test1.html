@@ -2,65 +2,354 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test docu 1</title>
-    <style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Ratnagiri Mangoes</title>
+    
+    <style> 
     *{
     padding: 0;
     margin: 0;
     }
-    .nav-container{
-
-        font-family:'Poppins', sans-serif;;
+    img
+    {
+        width: 100%;
+        display:block;
+    }
+    .main-wrapper
+    {
+        min-height: 100vh;
+        background-color: #a7a2a2;
         display: flex;
+        align-items: center;
         justify-content: center;
-        position: sticky;
-        background-color:rgb(255, 191, 52);
+        /* border: 2px solid black; */
     }
-    .nav-container li{
-        list-style-type:none;
-        display: inline-block;
+    .product-container
+    {
+        /* max-width: 1200px; */
+        margin:0 auto;
+        /* padding: 0 16px; */
     }
-    .nav-container  a{
-        display: inline-block;
-        padding: 10px;
-        color: black;
-        text-decoration: none;
-    }    
-    .main-logo{
-    height: 80px; 
-
-    display: flex;
-    justify-content: center;
-    float:center;
+    .product-details
+    {
+        margin:1rem 0;
+        padding:2rem 0 ;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        background-color: #f5f1f1;
+        border-radius: 3px;
+        column-gap: 10px;
     }
     
-    .side-logo-background {
+    .product-details-left
+    {
+        padding: 20px;
+    }
+    .product-details-right
+    {
+        padding:20px;
+    }
+    .img-container img
+    {
+        width: 400px;
+        margin: 0 auto;
+    }
+    .hover-container
+    {
         display: flex;
-        height: 80px;
-        float: left;
+        flex-wrap:wrap;
+        align-items: center;
+        justify-content: center;
+        margin-top: 32px;
+    }
+    
+    .hover-container div
+    {
+        border:1.5px solid #ffb109;
+        /* padding: 1rem; */
+        border-radius: 3px;
+        margin: 0 4px 8px 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+    }
+    .hover-container div img
+    {
+        width:100px;
+        cursor: pointer;
+        border-radius: 8.5px;
+    }
+    .active{
+        border-color: #ffb109 !important;
+    }
+    .product-details-right span
+    {
+        display: block;
+    }
+    
+    .hover-container div :hover
+    {
+        border:3px  solid#ffb109;
+    }
+    .product-name
+    {
+        font-size: 26px;
+        margin-bottom: 22px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        opacity: 0.9;
+    }
+    .price
+    {
+     font-weight: 500;
+     font-size :24px;
+     opacity: 0.9;
+    }
+    .product-description
+    {
+        font-size:1.25em ;
+        font-weight:18px ;
+        line-height: 1.6;
+        font-weight: 300;
+        opacity: 0.9;
+        margin-top: 22px;
+    }
+    .buy-now button
+    {
+        margin-top: 22px;
+        display:inline-block;
+        font-size: 16px;
+        font-family: 'Poppins', sans-serif;
+        text-transform: uppercase;
+        padding:15px 16px ;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background-color:#077125;
+        border: 2px solid #ffb109;
+    }
+    .buy-now button:hover
+    {
+        background-color: #ffb109;
     }
 
+.product-section{
+display: flex;
+flex-wrap: wrap;
+width:100%;
+justify-content: center;
+align-items: center;
+margin:10px 0;
+}
+.items
+{
+    width:20%;
+    margin: 15px;
+    float: left;
+    text-align: center;
+    border-radius: 20px;
+    cursor:pointer;
+    overflow: hidden;
+    box-shadow: 0 14px 28px rgba(0, 0,0,0.25 ),0 10px 10px rgba(0,0,0,0.22);
+    transition: .4s;
+    background: #f2f2f2;
+    border:3px solid #ffb109; ;
+}
+.items:hover
+{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.16);
+    /* transform: translate(0px,-8px); */
+}
+.items a
+{
+    text-decoration: none;
+}
+.items img
+{
+    width: 100%;
+    height: 250px;
+    text-align: center;
+    margin:  0 auto;
+    display: block;
+}
+.items p
+{
+    text-align: center;
+    color: #b2bec3;
+    padding-top: 0 8px;
+}
+.items h3
+{
+    color: #333;
+}
+.items-button
+{
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    width:100%;
+    padding:15px;
+    border: 0;
+    outline :none;
+    cursor: pointer;
+    margin-top: 5px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    background-color: #077125
+}
+.items-button:hover
+{
+    background-color: rgba(255, 161, 9);
+}
+
+.related-section h1
+{
+    margin-top:20px ;
+    font-family:'Poppins', sans-serif ;
+    text-align: center;
+}
+.about-product h1
+{
+    margin-top:20px ;
+    font-family:'Poppins', sans-serif ;
+    /* text-align: center; */
+    padding:30px
+}
+.section1 p
+{
+    font-size: 1.3em;
+    padding: 0 50px;
+    /* padding-top: 30px; */
+}
+.section2 p
+{
+    font-size: 1.3em;
+    padding: 50px;
+
+}
+    @media screen and (max-width:880px)
+    {
+        .product-details{
+            grid-template-columns: 100%;
+        }
+        .product-details-right
+        {
+            text-align: center;
+        }
+        .product-description
+        {
+            max-width: 400;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+    @media screen and (max-width:430px)
+    {
+        .buy-now button{
+            width: 100%;
+            margin-bottom: 30px;
+        }
+    }
     </style>
-</head>
 <body>
-    <header>
-            <div class="header-img-container">
-                <!-- <div class="side-logo-background">
-                    <img src="mango-background1.jpg" >
-                </div> -->
-                <div class="main-logo">
-                    <img src="logo3.jpg" >
+    <div class="mainwrapper">
+        <div class="container">
+            <div class="product-details">
+                <div class="product-details-left">
+                    <div class="img-container">
+                        <img src="assets/Ratnagiri.jpg" alt="">
+                    </div>
+                    <div class="hover-container">
+                        <div>
+                            <img src="assets/main-image.jpg" alt="">
+                        </div>
+                        <div>
+                            <img src="assets/main-image.jpg" alt="">
+                        </div>
+                        <div>
+                            <img src="assets/main-image.jpg" alt="">
+                        </div>
+                        <div>
+                            <img src="assets/main-image.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
+                <div class="product-details-right">
+                    <span class="product-name">
+                      Product product-name  
+                    </span>
+                    <span class="price">$$$$</span>
+                    <p class="product-description">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, quis optio suscipit cumque mollitia necessitatibus hic ut nostrum fugiat magnam numquam neque cum? Aperiam quisquam eveniet, ullam optio temporibus ad!
+                    </p>
+                    <div class="buy-now">
+                        <button type="button" >Buy Now</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="nav-container">
-            <ul >
-                <li><a href="#About us">About us</a></li>
-                <li><a href="#Varieties">Varieties</a></li>
-                <li><a href="#Order">Order</a></li>
-                <li><a href="#Feedback">Feedback</a></li>
-            </ul>
+        <div class="related-section">
+            <h1>Related products</h1>
+            <div class="product-section">
+            <div class="items">
+                <a href="">
+                <img src="assets/devgad 2.webp" alt="">
+                  <h3>Devgad Mangos</h3>
+                  <p>Lorem ipsum dolor sit, amet consectetur</p>
+                  <h3>600/-</h3>
+                  <button class="items-button">Order now</button>
+                </a>
+                </div>
+          
+                <div class="items">
+                  <a href="">
+                  <img src="assets/Totapuri.jpg" alt="">
+                  <h3>Totapuri Mangos</h3>
+                  <p>Lorem ipsum dolor sit, amet consectetur</p>
+                  <h3>600/-</h3>
+                  <button class="items-button">Order now</button>
+                </a>
+                </div>
+          
+                <div class="items">
+                  <a href="">
+                  <img src="assets/dahseri.jpg" alt="">
+                  <h3>Dahseri Mangos</h3>
+                  <p>Lorem ipsum dolor sit, amet consectetur</p>
+                  <h3>600/-</h3>
+                  <button class="items-button">Order now</button>
+                </a>
+                </div>
+            </div>
         </div>
-    </header>
+        <div class="about-product">
+            <h1>About (product name)</h1>
+            <div class="section1">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos nostrum laborum, dolores magni mollitia delectus dicta eligendi, enim voluptatem molestiae at. Aliquam ea delectus ut accusamus veritatis, mollitia facere aperiam.
+                Dolor at, tenetur quasi, recusandae consectetur facere eius iusto magni minima nisi perferendis ut labore, voluptate delectus totam illum voluptas tempora aut placeat mollitia veniam dolores nemo quidem explicabo! Ut?
+                Quaerat quos aperiam perferendis iusto est incidunt facere tenetur ratione, sunt quam numquam! Obcaecati non similique iste. Quasi neque ipsum laborum. Vitae ut unde quaerat accusamus nemo doloribus, consequuntur illum.
+                Quisquam, nulla voluptatibus. Officia ea exercitationem impedit commodi sint? Nobis voluptates quia expedita doloribus! Unde, quos reprehenderit! Quod unde aut, minus ipsa ducimus labore recusandae, vel delectus est non sequi.
+                Rerum enim adipisci dolores nesciunt natus similique reprehenderit accusantium voluptatum deserunt quo exercitationem atque sint tempora qui quis reiciendis eius quidem maxime assumenda, autem quod. Illum suscipit accusantium aut modi?
+                Odio itaque voluptates dolore. Modi suscipit ratione dolor dicta dolores error odio nulla architecto excepturi. Error totam ratione unde saepe illo expedita at eum reiciendis, debitis, iure facere voluptatem aliquam.
+                Voluptatum corrupti cupiditate iste! Quos atque earum quas mollitia ad quod recusandae pariatur nulla asperiores corporis? Quasi cupiditate, perspiciatis incidunt, recusandae eum eos similique in autem, pariatur sapiente harum optio!
+                Nisi harum tempora, repellendus voluptatum cupiditate laudantium eius ut odit aspernatur recusandae eaque debitis repudiandae porro, voluptatibus iure quae ullam consectetur illum, exercitationem commodi? Est sunt omnis ducimus esse magnam?
+                Consequuntur magnam neque eligendi quo ducimus eaque nesciunt quod repellendus. Maiores exercitationem nesciunt nam suscipit unde modi impedit sint doloribus, dolores fuga tempore deserunt eaque, veniam iusto hic eos autem!
+                Vel officia, rerum harum laboriosam sequi id? Fuga fugiat, tempore earum doloribus perspiciatis necessitatibus nam qui officia saepe numquam sapiente in labore omnis, excepturi, exercitationem ullam? Obcaecati sint officiis unde?</p>
+            </div>
+            <div class="section2">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos nostrum laborum, dolores magni mollitia delectus dicta eligendi, enim voluptatem molestiae at. Aliquam ea delectus ut accusamus veritatis, mollitia facere aperiam.
+                Dolor at, tenetur quasi, recusandae consectetur facere eius iusto magni minima nisi perferendis ut labore, voluptate delectus totam illum voluptas tempora aut placeat mollitia veniam dolores nemo quidem explicabo! Ut?
+                Quaerat quos aperiam perferendis iusto est incidunt facere tenetur ratione, sunt quam numquam! Obcaecati non similique iste. Quasi neque ipsum laborum. Vitae ut unde quaerat accusamus nemo doloribus, consequuntur illum.
+                Quisquam, nulla voluptatibus. Officia ea exercitationem impedit commodi sint? Nobis voluptates quia expedita doloribus! Unde, quos reprehenderit! Quod unde aut, minus ipsa ducimus labore recusandae, vel delectus est non sequi.
+                Rerum enim adipisci dolores nesciunt natus similique reprehenderit accusantium voluptatum deserunt quo exercitationem atque sint tempora qui quis reiciendis eius quidem maxime assumenda, autem quod. Illum suscipit accusantium aut modi?
+                Odio itaque voluptates dolore. Modi suscipit ratione dolor dicta dolores error odio nulla architecto excepturi. Error totam ratione unde saepe illo expedita at eum reiciendis, debitis, iure facere voluptatem aliquam.
+                Voluptatum corrupti cupiditate iste! Quos atque earum quas mollitia ad quod recusandae pariatur nulla asperiores corporis? Quasi cupiditate, perspiciatis incidunt, recusandae eum eos similique in autem, pariatur sapiente harum optio!
+                Nisi harum tempora, repellendus voluptatum cupiditate laudantium eius ut odit aspernatur recusandae eaque debitis repudiandae porro, voluptatibus iure quae ullam consectetur illum, exercitationem commodi? Est sunt omnis ducimus esse magnam?
+                Consequuntur magnam neque eligendi quo ducimus eaque nesciunt quod repellendus. Maiores exercitationem nesciunt nam suscipit unde modi impedit sint doloribus, dolores fuga tempore deserunt eaque, veniam iusto hic eos autem!
+                Vel officia, rerum harum laboriosam sequi id? Fuga fugiat, tempore earum doloribus perspiciatis necessitatibus nam qui officia saepe numquam sapiente in labore omnis, excepturi, exercitationem ullam? Obcaecati sint officiis unde?</p>
+            </div>
+        </div>
+    </div>
+    <script src="test.js"></script>
 </body>
-</html>

@@ -2,111 +2,202 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
+    <title>Product Image Change</title>
+    <!-- <link rel = "stylesheet" href = "style.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
     *{
     padding: 0;
     margin: 0;
-}
-.nav-container{
+    }
+    img
+    {
+        width: 100%;
+        display:block;
+    }
+    .main-wrapper
+    {
+        min-height: 100vh;
+        background-color: #a7a2a2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* border: 2px solid black; */
+    }
+    .container
+    {
+        max-width: 1200px;
+        margin:0 auto;
+        padding: 0 16px;
+    }
+    .product-details
+    {
+        margin:1rem 0;
+        padding:2rem 0 ;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        background-color: #f5f1f1;
+        border-radius: 3px;
+        column-gap: 10px;
+    }
     
-    font-family:'Poppins', sans-serif;;
-    display: flex;
-    justify-content: center;
-    position: sticky;
-    background-color:rgb(255, 191, 52);
-    align-items: center;
+    .product-details-left
+    {
+        padding: 20px;
+    }
+    .product-details-right
+    {
+        padding:20px;
+    }
+    .img-container img
+    {
+        width: 400px;
+        margin: 0 auto;
+    }
+    .hover-container
+    {
+        display: flex;
+        flex-wrap:wrap;
+        align-items: center;
+        justify-content: center;
+        margin-top: 32px;
+    }
+    .hover-container div
+    {
+        border:1.5px solid #ffb109;
+        /* padding: 1rem; */
+        border-radius: 3px;
+        margin: 0 4px 8px 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+    }
+    .active{
+        border-color: #ffb109 !important;
+    }
+    .hover-container div :hover
+    {
+        border:3px  solid#ffb109;
+    }   
+    .hover-container div img
+    {
+        width:100px;
+        cursor: pointer;
+        border-radius: 8.5px;
+    }
+    .product-details-right span
+    {
+        display: block;
+    }
+    .product-name
+    {
+        font-size: 26px;
+        margin-bottom: 22px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        opacity: 0.9;
+    }
+    .price
+    {
+     font-weight: 500;
+     font-size :24px;
+     opacity: 0.9;
+    }
+    .product-description
+    {
+        font-weight:18px ;
+        line-height: 1.6;
+        font-weight: 300;
+        opacity: 0.9;
+        margin-top: 22px;
+    }
+.buy-now button
+    {
+        margin-top: 22px;
+        display:inline-block;
+        font-size: 16px;
+        font-family: 'Poppins', sans-serif;
+        text-transform: uppercase;
+        padding:15px 16px ;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background-color:#077125;
+        border: 2px solid #ffb109;
+    }
+    .buy-now button:hover
+    {
+        background-color: #ffb109;
+    }
 
-}
-.nav-container li{
-    list-style-type:none;
-    display: inline;
-}
-.nav-container  a{
-    display: inline-block;
-    padding: 10px;
-    color: black;
-    text-decoration: none;
-}
-.main-logo{
-height: 80px; 
-width: auto;
-display: flex;
-justify-content: center;
-background-color: currentColor;
-}
-#test-flex{
-    position: -webkit-sticky; /* for browser compatibility */
-  position: sticky;
-  top: 0.5px;
-  /* background-color: #00ff00; */
-  /* padding: 3px; */
-}
-
-.slider
-{
-    display: flex;
-    flex-direction: row;
-    height: fit-content;
-    overflow-x: hidden;
-}
-.slider-nav a
-{
-    width: 0.5rem;
-    height:0.5rem;
-    border-radius: 50%;
-    background-color: #fff;
-    opacity: 0.75;
-    transition: opacity ease 250ms;
-}
-.slider a:hover
-{
-    opacity: 1;
-}
-#slide2
-{
-    height: 400px;
-    width:100%;
-}
-#slide1
-{
-    height: 400px;
-    width:100%;
-}
-#slide3
-{
-    height: 400px;
-    width: 100%;
-}
-</style>
+@media screen and (max-width:880px)
+    {
+        .product-details{
+            grid-template-columns: 100%;
+        }
+        .product-details-right
+        {
+            text-align: center;
+        }
+        .product-description
+        {
+            max-width: 400;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+    @media screen and (max-width:430px)
+    {
+        .buy-now button{
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+    </style>
+</head>
 <body>
-    <header>
-        
-    </header><div class="nav-container">
-            <nav></nav>
-            <img src="logo4-removebg-preview.png" class="main-logo">
-            <ul >
-                <li><a href="#About us">About us</a></li>
-                <li><a href="#Varieties">Varieties</a></li>
-                <li><a href="#Order">Order</a></li>
-                <li><a href="#Feedback">Feedback</a></li>
-            </ul>
-        </div>
-        <!-- <div class="slider-container"> -->
-        <div class="slider-wrapper">
-            <div class="slider">
-            <img id="slide1" src="D:\WEBSITE PROJECT\CODE\PROJECT-WEBSITE\main-image.jpg" alt="">
-            <img id="slide2" src="D:\WEBSITE PROJECT\CODE\PROJECT-WEBSITE\mango-background1.jpg" alt="">
-            <img id="slide3"  src="D:\WEBSITE PROJECT\CODE\PROJECT-WEBSITE\hotchicksing-Dyc95dKuGp4-unsplash.jpg" alt="">
+
+    <div class="mainwrapper">
+        <div class="container">
+            <div class="product-details">
+                <div class="product-details-left">
+                    <div class="img-container">
+                        <img src="assets/Ratnagiri.jpg" alt="">
+                    </div>
+                    <div class="hover-container">
+                        <div id="img1">
+                            <img src="assets/main-image.jpg" alt="">
+                        </div>
+                        <div id="img2">
+                            <img src="assets/main-image.jpg" alt="">
+                        </div>
+                        <div id="img3">
+                            <img src="assets/main-image.jpg" alt="">
+                        </div>
+                        <div id="img4">
+                            <img src="assets/main-image.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="product-details-right">
+                    <span class="product-name">
+                      Product product-name  
+                    </span>
+                    <span class="price">$$$$</span>
+                    <p class="product-description">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, quis optio suscipit cumque mollitia necessitatibus hic ut nostrum fugiat magnam numquam neque cum? Aperiam quisquam eveniet, ullam optio temporibus ad!
+                    </p>
+                    <div class="buy-now">
+                        <button type="button" >Buy Now</button>
+                    </div>
+                </div>
             </div>
-        <div class="slider-nav">
-            <a href="#slide1"></a>
-            <a href="#slide2"></a>
-            <a href="#slide3"></a>
         </div>
-       </div>
-        <!-- </div> -->
+    </div>
+    <script src = "test.js"></script>
 </body>
 </html>

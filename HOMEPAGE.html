@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ratnai Mangoes</title>
+    <link rel="stylesheet" href="homepage.css">
+    <script src="Script3.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-container">
+            <nav>
+                <ul id="side-bar">   
+                        <li onclick=closeSideBar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                        <li> <a href="HOMEPAGE.html">Home</a></li>
+                        <li> <a href="#Aboutus">About us</a></li>
+                        <li> <a href="PRODUCTS.html">Varieties</a></li>
+                        <li> <a href="#Order">Order</a></li>
+                        <li> <a href="#Contactus">Contact us</a></li>    
+                </ul>
+                <ul id="nav-list">
+                        <li>
+                            <div>
+                                <img src="assets/WhatsApp_Image_2024-01-06_at_21.49.08_081c5053-removebg-preview.png" id="nav-logo">
+                            </div>
+                        </li>
+                        <li>
+                            <div id="nav-items">
+                                <a href="HOMEPAGE.html">Home</a>
+                                <a href="#Aboutus">About us</a>
+                                <a href="PRODUCTS.html">Varieties</a>
+                                <a href="#Order">Order</a>
+                                <a href="#Contactus">Contact us</a> 
+                            </div>
+                        </li> 
+                        <div id="side-bar-logo" onclick=showSidebar()>
+                             <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" width="30"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
+                        </div>                               
+                </ul>
+            </nav>
+        </div>
+        <div class="hero-banner"> 
+                <div class="hero-text">
+                    <h1>Get the best farm fresh mangos from Ratnai Mango</h1>
+                   <a href="#" class="hero-text-button">Shop Now</a>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/hero-image2-removebg-preview.png" alt="">
+                </div>
+        </div>
+        
+        <div class="features-title">
+            <h3>Why Ratnai Mango</h3>
+        </div>
+            <div class="features">
+                <div class="card">
+                    <img src="assets/gradient_organic_leaves_organic.jpg" alt="">
+                </div>
+                <div class="card">
+                    <img src="assets/indian-farmer-vector-21895195.jpg" alt="">
+                </div>
+                <div class="card">
+                    <img src="assets/WhatsApp_Image_2024-01-06_at_21.49.08_081c5053-removebg-preview.png" alt="">
+                </div>
+                <div class="card">
+                    <img src="assets/gradient_organic_leaves_organic.jpg" alt="">
+                </div>
+            </div>
+        <div class="footer">
+            <div class="footer-container">
+                <div class="footer-panel">
+                    <img src="assets/WhatsApp_Image_2024-01-06_at_21.49.08_081c5053-removebg-preview.png" id="footer-image"alt="">
+                    <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate illo incidunt voluptates! Eius nesciunt possimus mollitia saepe illum praesentium commodi nostrum repellat minima rem maxime laboriosam quasi, suscipit itaque ullam?</p>
+                        <a href="#aboutus" id="footer-button">Know More</a>
+                </div>
+                <div class="footer-panel">
+                    <h3 style="padding-left: 30px;">Quick links</h3>
+                        <li><a href="HOMEPAGE.html">Home</a></li>
+                        <li><a href="#about us">About us</a></li>
+                        <li><a href="PRODUCTS.html">Varieties</a></li>
+                        <li><a href="#Orders">Orders</a></li>
+                        <li><a href="#Contact us">Contact us</a></li>
+                </div>
+                <div class="footer-panel">
+                    <h3>Contact Details</h3>
+                    <p></p>
+                    <p style="text-align: justify; padding-top: 10px;">shop no 1, Kinara Hotel, behind shivshankr residency, Katraj, Pune, Maharashtra 411046</p>
+                    <p style="text-align: justify; padding-top: 10px;">ratnaimango21@gmail.com</p>
+                    <p style="text-align: justify; padding-top: 20px;">+91 8378 040415 / +91 7058 586764</p>
+                    <p></p>
+                </div>
+            </div>
+            <div class="bottom-footer">
+                <p>&copy; 2024 Ratnai Mango. All rights reserved.</p>
+            </div>
+        </div>    
+    </div>  
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        var navbar = document.querySelector(".nav-container");
+        var sticky = navbar.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+        </script>  
+</body>
+</html>

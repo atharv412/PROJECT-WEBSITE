@@ -6,3 +6,4 @@ function closeSideBar() {
     const sidebar=document.querySelector('#side-bar')
     sidebar.style.display='none'
 }
+
