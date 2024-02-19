@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Contact us</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+        }
+        .container
+        {
+            min-height: 100vh;
+            /* background-color: #e8f0fe; */
+            padding: 20px;
+            text-align: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .form-title
+        {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .contact-info
+        {
+            width:30%;
+            margin-right: 20px;
+            text-align: left;
+        }
+        .contact-info p
+       {
+            margin-bottom: 25px;
+            font-size: 19px;
+       }
+       .contact-info i
+       {
+            color: #4caf50;
+            margin-right: 10px;
+       }
+       .form {
+        text-align: center;
+       }
+       .form-group
+       {
+        margin: 25px;
+       }
+       input{
+        width: 100%;
+        padding: 12px;
+        border: none;
+        background-color: #d9d7d7;
+    
+       }
+       textarea{
+        width: 100%;
+        padding: 12px;
+        border: none;
+        background-color: #d9d7d7;
+
+       }
+       input:focus,textarea:focus{
+        outline: none;
+        border-left: 2px solid #ffb109;
+        border-bottom: 2px solid #ffb109;
+       }
+       input:hover,textarea:hover
+       {
+            /* background-color: #077125; */
+            border-color: #077125;
+       }
+       button
+       {
+        display: inline-block;
+        height: 50px;
+        width: 150px;
+        font-size: 17px;
+        padding: 12px 24px;
+        background-color: #4caf50;
+        color: #fff;
+        border:none;
+        cursor: pointer;
+        transition: 0.3s ease;
+       }
+       button:hover
+       {
+        background-color: #ebc60d;
+       }
+       .center-image img
+       {
+        width:400px;
+        height: 300px;
+       }
+       @media screen and (max-width:1110px)
+       {
+        .contact-info{
+                width:100%;
+                padding: 0 30px 0 30px;
+            }
+            input
+            {
+                width: 100%;
+                /* padding: 0 30px 0 30px; */
+            }
+            .form-group
+            {
+                width: 100%;
+            }
+            .center-image img
+            {
+                width:750px;
+                height:600px ;
+                /* width:60%; */
+            }
+            .form
+            {
+                width: 100%;
+            }
+       }
+       @media screen and (max-width:750px)
+       {
+        .center-image img
+            {
+                width:375px;
+                height:300px ;
+                /* width:60%; */
+            }
+       }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="contact-info">
+         <p><i class="fas fa-map-marker-alt"></i>shop no 1, Kinara Hotel, behind shivshankr residency, Katraj, Pune, Maharashtra 411046</p>
+         <p><i class="fas fa-mobile"></i>+91 8378 040415 / +91 7058 586764</p>
+         <p><i class="fas fa-envelope"></i>ratnaimango21@gmail.com</p>
+        </div>
+        <div class="center-image">
+            <img src="mango-5224186_1280-removebg-preview.png" alt="">
+        </div>
+        <form action="">
+            <div class =form>
+            <div class="form-title">
+                <h2>Quick Enquiry</h2>
+            </div>
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <input type="email" name="e-mail" placeholder="Your E-mail">
+            </div>
+            <div class="form-group">
+                <input type="number" name="Number" placeholder="Your PhoneNumber">
+            </div>
+            <div class="form-group">
+                <textarea name="message" placeholder="message"></textarea>
+            </div>
+            <button type="Submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

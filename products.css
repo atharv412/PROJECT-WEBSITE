@@ -206,6 +206,7 @@ h3{
     margin-top: 5px;
     border-bottom-left-radius: 18px;
     border-bottom-right-radius: 18px;
+    transition: 0.3s ease;
     background-color: #077125
 }
 .items-button:hover
