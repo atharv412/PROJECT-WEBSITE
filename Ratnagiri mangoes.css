@@ -361,6 +361,7 @@ img
     .img-container img
     {
         width: 400px;
+        height: 350px;
         margin: 0 auto;
     }
     .hover-container
@@ -458,14 +459,15 @@ margin:10px 0;
     border-radius: 20px;
     cursor:pointer;
     overflow: hidden;
-    box-shadow: 0 14px 28px rgba(0, 0,0,0.25 ),0 10px 10px rgba(0,0,0,0.22);
+    /* box-shadow: 0 14px 28px rgba(0, 0,0,0.25 ),0 10px 10px rgba(0,0,0,0.22); */
     transition: .4s;
     background: #f2f2f2;
     border:3px solid #ffb109; ;
 }
 .items:hover
 {
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.16);
+    /* box-shadow: 0 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.16); */
+    box-shadow: 0 14px 28px rgba(0, 0,0,0.03 ), 10px 13px 10px rgba(0,0,0,0.35);
     /* transform: translate(0px,-8px); */
 }
 .items a
