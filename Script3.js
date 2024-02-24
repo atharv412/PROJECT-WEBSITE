@@ -25,7 +25,18 @@ function showBulk()
     const bulk=document.querySelector('#order-type2')
     bulk.style.display='block'
     wholesale.style.display='none'
-}  
+    
+} 
+function showWholesaleForm()
+{   
+    const form1=document.querySelector(".order-form")
+    const form2=document.querySelector(".order-form2")
+    form2.style.display='block'
+    form1.style.display='none'
+}
+function wholesalealert() {
+    alert("Your order is successfully placed,we will contact you soon regarding the same")
+}
 
 
 // const navbar = document.querySelector('#nav-list');

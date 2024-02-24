@@ -51,25 +51,27 @@
             </div>
             <div class="ordersection">
                 <div class="order-descp">
-                    <button class="button-group" onclick=showWholesale()>Wholesale orders</button>
-                    <button class="button-group" onclick=showBulk()>Bulk orders</button>
+                    <!-- <button class="button-group" onclick=showWholesale()>Wholesale orders</button> -->
+                    <button class="button-group" onclick=showBulk(),showWholesaleForm()>Wholesale orders / Bulk orders</button>
                     <div id="order-type1">
-                        <p>We now bring you the option of buying mangoes in large numbers for reselling and commercial use. You can now book your orders at super-slashed rates and get your stocks delivered at your doorsteps in units of “Half” and “One Dozen” or in Peti's (crates). Our prices are so competitive as compared to the wholesale markets, that you won't resist trying us out for once.</p>
+                        <p>We now bring you the option of buying mangoes in large numbers for reselling and commercial use. You can now book your orders at super-slashed rates and get your stocks delivered at your doorsteps in units of “Half” and “One Dozen” . Our prices are so competitive as compared to the wholesale markets, that you won't resist trying us out for once.</p>
                         <div class="order-note1">
                             <p>Note:</p>
                             <ul>
-                                <li>For wholesale order, purchase order should be more than 50 dozens</li>
+                                <!-- <li>For wholesale order, purchase order should be more than 50 dozens</li> -->
+                                <li>Deliveries are subject to availability</li>
                                 <li>Please contact us on +91 8378 040415 or mail us on ratnaimango21@gmail.com</li>
                             </ul>
                         </div>
                     </div>
                     <div id="order-type2">
-                        <p>We bring you the option of bulk buying. Instead of booking in units of “half” and “one dozen” orders sizes, buy by Peti (crates). A Peti typically holds four to five dozen hafoos mangoes and is usually shipped while the fruit is freshly plucked. Simply choose what type and quantity you desire, when you need them delivered and leave the rest to us.</p>
+                        <p>We bring you the option of bulk/wholesale buying. Instead of booking in units of “half” and “one dozen” orders sizes, buy by Peti (crates). A Peti typically holds four to five dozen hafoos mangoes and is usually shipped while the fruit is freshly plucked. Simply choose what type you desire, leave the rest to us.</p>
                         <div class="order-note2">
                             <p>Note:</p>
                             <ul>
                                 <li>Bulk order will be shipped in crates only</li>
-                                <li>Deliveries are subject to availability</li>
+                                <li>For wholesale order, purchase order should be more than 50 dozens</li>
+                                <li>Please contact us on +91 8378 040415 or mail us on ratnaimango21@gmail.com</li>
                             </ul>
                         </div>
                     </div>
@@ -108,11 +110,12 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="order-selection">Order type</label>
-                        <select name="order-selection" id="order-selection">
+                        <label for="order-selection">Quantity(in dozens)</label>
+                        <!-- <select name="order-selection" id="order-selection">
                             <option value="order1">Wholesale order</option>
                             <option value="order2">Bulk Order</option>
-                        </select>
+                        </select> -->
+                        <input type="number" name ="order-selection" >
                     </div>
                     <div class="form-group">
                         <label for="date">Select date</label>
@@ -124,6 +127,43 @@
                     </div>
                     <div>
                         <button class="sbmt-button">Submit</button>
+                    </div>
+                </div>
+                <div class="order-form2" action="get">
+                    <div class="form-title">
+                        <h3>Order</h3>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" name ="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email-Id</label>
+                        <input type="email" name ="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="PhoneNumber">Phone </label>
+                        <input type="number" name ="PhoneNumber" >
+                    </div>
+                    <div class="form-group">
+                        <label for="mango-type">Choose a mango type</label>
+                        <select id="mango-type" name="mango-type">
+                            <option value="Ratnagiri">Ratnagiri</option>
+                            <option value="Devgad">Devgad</option>
+                            <option value="Totapuri">Totapuri</option>
+                            <option value="Dahseri">Dahseri</option>
+                            <option value="Payri">Payri</option>
+                            <option value="Kesar">Kesar</option>
+                            <option value="Langra">Langra</option>
+                            <option value="Chausa">Chausa</option>
+                            <option value="Neelam">Neelam</option>
+                            <option value="Safeda">Safeda</option>
+                            <option value="Badami">Badami</option>
+                            <option value="Suvarna-rekha">Suvarna-rekha</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button class="sbmt-button" onclick=wholesalealert() >Submit</button>
                     </div>
                 </div>
             </div>
